@@ -15,7 +15,7 @@ body{font-family:'Cairo',system-ui,sans-serif;color:#f1ede4;background:var(--ink
   background-image:radial-gradient(ellipse at 20% 0%,rgba(242,194,48,.07),transparent 55%),
   url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.09'/%3E%3C/svg%3E")}
 .en{font-family:'Special Elite',monospace;letter-spacing:.04em}
-.wrap{max-width:560px;margin:0 auto;padding:0 16px 56px;min-height:100vh}
+.wrap{max-width:560px;margin:0 auto;padding:0 16px 10px}
 .tape{height:16px;background:repeating-linear-gradient(-45deg,var(--y) 0 14px,#111 14px 28px);box-shadow:0 2px 8px rgba(0,0,0,.5)}
 .tape.tilt{transform:rotate(-2deg);margin:0 -24px}
 .label{display:inline-block;background:var(--y);color:#111;font-weight:900;padding:2px 16px;clip-path:polygon(1% 6%,99% 0,100% 92%,0 100%);transform:rotate(-1.2deg)}
@@ -86,7 +86,7 @@ input.code{font-family:'Special Elite',monospace;letter-spacing:.3em;text-transf
 @keyframes shake{20%,60%{transform:translateX(-8px)}40%,80%{transform:translateX(8px)}}
 .lockbox{text-align:center;padding:30px 16px}
 .lockbox .big{font-size:3rem}
-
+ 
 /* game */
 .game{margin-top:18px;background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:14px;position:relative}
 .ghead{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px}
@@ -202,14 +202,72 @@ td.code{font-family:'Special Elite',monospace;font-size:1.2rem;letter-spacing:.1
 .ds small{color:#999;font-size:.75rem}
 .tag{font-size:.72rem;font-weight:900;padding:0 8px;border-radius:999px;background:#2a2a2e;color:#ddd}
 .tag.play{background:rgba(242,194,48,.18);color:var(--y)}.tag.done{background:rgba(63,181,107,.2);color:#7fe0a3}.tag.gift{background:rgba(111,211,255,.15);color:#6fd3ff}
+ 
+/* ===== footer ===== */
+.fa{margin-top:40px;border-top:1px solid #222;padding:26px 16px 22px;text-align:center;background:#0b0b0c}
+.fa .w{max-width:560px;margin:0 auto}
+.fa .ttl{display:flex;align-items:center;gap:10px;color:var(--muted);font-size:.78rem;font-weight:700;margin-bottom:12px}
+.fa .ttl::before,.fa .ttl::after{content:"";flex:1;border-top:1px dashed #333}
+.tile{background:#f3efe6;border-radius:8px;display:grid;place-items:center;padding:8px;text-decoration:none}
+.tile img{max-width:100%;object-fit:contain;display:block}
+.fa .spm{height:80px}.fa .spm img{max-height:56px;max-width:70%}
+.fa .spg{display:grid;gap:8px;margin-top:8px}
+.fa .spg .tile{height:58px}.fa .spg img{max-height:38px}
+.fa .sep{height:1px;background:#222;margin:26px 0 22px}
+.fa b.cn{font-size:1rem}.fa p{color:#888;font-size:.8rem;margin-top:2px}
+.fa .row{display:flex;justify-content:center;gap:10px;margin-top:16px}
+.fa .row a{width:44px;height:44px;border-radius:50%;border:1.5px solid #333;display:grid;place-items:center;background:#141416}
+.fa .row a svg{width:20px;height:20px}
+.fa .lnk{display:flex;justify-content:center;gap:18px;margin-top:16px;font-size:.85rem}
+.fa .lnk a{color:#ddd;text-decoration:none;border-bottom:1.5px solid var(--y)}
+.fa .c{margin-top:18px;font-size:.7rem;color:#555}
+.sbar{margin-top:10px;display:flex;align-items:center;justify-content:space-between;gap:12px;background:#f3efe6;border-radius:10px;padding:10px 16px;border-right:6px solid var(--y);box-shadow:0 6px 16px rgba(0,0,0,.35);text-decoration:none}
+.sbar b{display:block;color:#1b1b1b;font-size:.92rem;line-height:1.3}
+.sbar small{display:block;color:#8a8373;font-size:.68rem;line-height:1.2}
+.sbar img{max-height:36px;max-width:140px;object-fit:contain;display:block}
+.cta{margin-top:18px;border:2px dashed var(--y);border-radius:12px;padding:16px;text-align:center;background:rgba(242,194,48,.06)}
+.cta h3{font-size:1.05rem}.cta p{color:#cfc9bb;font-size:.9rem;margin:4px 0 12px}.cta a{display:block;text-decoration:none}
+/* ===== settings ===== */
+.set .sec{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:14px;margin-top:14px}
+.set .sec h3{font-size:1rem;margin-bottom:4px;display:flex;align-items:center;gap:8px}
+.set .sec .hint{font-size:.8rem;color:var(--muted);margin-bottom:10px}
+.set label{display:block;font-size:.82rem;font-weight:700;color:#ccc;margin:10px 0 4px}
+.set input.in,.set select{width:100%;font:inherit;font-size:.92rem;padding:9px 12px;border-radius:6px;border:1.5px solid #3a3a3e;background:#111;color:#fff;outline:none}
+.set input.in:focus,.set select:focus{border-color:var(--y)}
+.set input.ltr{direction:ltr;text-align:left}
+.set .radios{display:flex;gap:6px;flex-wrap:wrap}
+.set .radios button{font:inherit;font-weight:700;font-size:.85rem;padding:6px 12px;border-radius:999px;border:1.5px solid #444;background:#111;color:#ccc;cursor:pointer}
+.set .radios button.on{background:var(--y);color:#111;border-color:var(--y)}
+.spc{border:1px solid #2e2e33;border-radius:8px;padding:10px;margin-top:10px;background:#141416}
+.spc .top{display:flex;gap:10px;align-items:center}
+.spc .prev{width:110px;height:60px;flex-shrink:0;border-radius:6px;background:#f3efe6;display:grid;place-items:center;border:1.5px dashed #777;overflow:hidden;cursor:pointer;color:#777;font-size:.75rem;font-weight:700;text-align:center;padding:4px}
+.spc .prev img{max-width:100px;max-height:50px;object-fit:contain}
+.spc .acts{display:flex;flex-direction:column;gap:6px;flex:1}
+.spc .acts button,.addsp{font:inherit;font-weight:700;font-size:.82rem;padding:6px 10px;border-radius:6px;border:1.5px solid #444;background:#1c1c1f;color:#ddd;cursor:pointer}
+.spc .acts button.del{color:#ff9b8a;border-color:#5a2a24}
+.addsp{width:100%;margin-top:10px;border-style:dashed;padding:10px;color:var(--y);border-color:#5a4a1a}
+.strow{display:flex;align-items:center;gap:10px;margin-top:8px}
+.strow span{flex:1;font-weight:700;font-size:.88rem}
+.strow select{width:55%}
+.savebar{position:sticky;bottom:0;background:linear-gradient(0deg,var(--ink) 70%,transparent);padding:16px 0 12px;margin-top:6px}
+.smsg{text-align:center;font-weight:900;font-size:.9rem;margin-top:8px;min-height:1.4em}
+.smsg.ok{color:var(--ok)}.smsg.err{color:var(--bad)}
+.fa .clogo{display:block;margin:0 auto 10px;max-height:64px;max-width:160px;object-fit:contain}
+.coverLogo img{display:block;margin:0 auto 14px;max-height:52px;max-width:150px;object-fit:contain;filter:drop-shadow(0 2px 6px rgba(0,0,0,.5))}
+.spc .prev.dark{background:#0b0b0c;color:#999}
+.hdr{display:none;align-items:center;justify-content:center;gap:8px;padding:10px 16px 0;max-width:560px;margin:0 auto}
+.hdr img{height:30px;width:auto;max-width:90px;object-fit:contain}
+.hdr span{font-size:.75rem;font-weight:700;color:var(--muted)}
 </style>
 </head>
 <body>
 <div class="tape"></div>
+<div class="hdr" id="hdr"></div>
 <main class="wrap" id="app"></main>
+<footer class="fa" id="footer"></footer>
 <div id="modal"></div>
 <div class="toast" id="toast"></div>
-
+ 
 <script>
 /* ======================== Firebase ========================
    الصقي هنا الإعدادات اللي تنسخينها من Firebase (Project settings → Your apps).
@@ -249,7 +307,7 @@ const STATIONS=[
 const SUSPECTS=[{n:'فيصل',r:'فني المختبر'},{n:'نورة',r:'باحثة زميلة'},{n:'خالد',r:'حارس الأمن'},{n:'هند',r:'طالبة دراسات عليا'}];
 const SUBSTANCES=[{n:'منوّم (A)',p:[[60,.9],[200,.4]]},{n:'مُهدّئ (B)',p:[[115,.75],[245,.65]]},{n:'مضاد حساسية (C)',p:[[85,.45],[170,.95]]},{n:'مُرخٍ عضلي (D)',p:[[140,.6],[275,.85]]}];
 const STEPS=['تأمين المسرح ومنع الدخول','التصوير والتوثيق','ترقيم الأدلة بالعلامات','جمع الأدلة وتغليفها','تسجيل سلسلة الحيازة'];
-
+ 
 function sha256(m){function r(n,x){return(x>>>n)|(x<<(32-n))}const K=[],H=[];let p=2,c=0;const isP=n=>{for(let f=2;f*f<=n;f++)if(n%f===0)return false;return true};
 while(c<64){if(isP(p)){if(c<8)H[c]=(Math.pow(p,1/2)*4294967296)|0;K[c]=(Math.pow(p,1/3)*4294967296)|0;c++}p++}
 const b=unescape(encodeURIComponent(m)),w=[],l=b.length*8;for(let i=0;i<b.length;i++)w[i>>2]|=b.charCodeAt(i)<<((3-i%4)*8);
@@ -280,7 +338,7 @@ function fingerprint(seed=1,color='#1b1b1b',w=1.6){
   }
   return `<svg viewBox="8 2 84 110" fill="none" stroke="${color}" stroke-width="${w}" stroke-linecap="round"><defs><clipPath id="fpc${seed}"><ellipse cx="50" cy="58" rx="38" ry="50"/></clipPath></defs><g clip-path="url(#fpc${seed})">${p}</g></svg>`;
 }
-
+ 
 /* ======================== الحالة ======================== */
 const KEY='forensic-journey-v2';
 function blank(){return {name:'',fileNo:'',startedAt:0,finishedAt:0,codes:{},stamps:{}}}
@@ -290,7 +348,7 @@ let fdb=null,LIVE=null,liveOn=false,fbState=FIREBASE.databaseURL?'loading':'off'
 const loadJS=src=>new Promise((ok,no)=>{const x=document.createElement('script');x.src=src;x.onload=ok;x.onerror=no;document.head.appendChild(x)});
 function initFB(){if(!FIREBASE.databaseURL)return;const v='10.12.2',b=`https://www.gstatic.com/firebasejs/${v}/`;
   loadJS(b+'firebase-app-compat.js').then(()=>loadJS(b+'firebase-database-compat.js')).then(()=>{
-    firebase.initializeApp(FIREBASE);fdb=firebase.database();fbState='on';sync();if(view.name==='org'&&view.orgOk)startLive();refreshDash()})
+    firebase.initializeApp(FIREBASE);fdb=firebase.database();fbState='on';sync();startCfg();if(view.name==='settings')render();if(view.name==='org'&&view.orgOk)startLive();refreshDash()})
   .catch(()=>{fbState='fail';refreshDash()})}
 const newId=()=>{let t='';const a=new Uint32Array(10);try{crypto.getRandomValues(a)}catch(e){for(let i=0;i<10;i++)a[i]=Math.random()*1e9}for(const x of a)t+='abcdefghijkmnpqrstuvwxyz23456789'[x%32];return t};
 function sync(){if(!fdb||!state.name||!state.fileNo)return;
@@ -300,7 +358,7 @@ function sync(){if(!fdb||!state.name||!state.fileNo)return;
     doneCount:doneCount(),current:nxt?nxt.id:0,points:points(),finishedAt:state.finishedAt||0,code:state.token?state.token+'-'+chk(state.token):''}).catch(()=>{})}
 let state=load();
 let view={name:state.name?'map':'cover',station:null,orgOk:false};
-
+ 
 function mulberry(a){return()=>{a|=0;a=a+0x6D2B79F5|0;let t=Math.imul(a^a>>>15,1|a);t=t+Math.imul(t^t>>>7,61|t)^t;return((t^t>>>14)>>>0)/4294967296}}
 let _case=null;
 function CASE(){
@@ -313,7 +371,7 @@ function CASE(){
     for(let j=0;j<k;j++){const idx=Math.floor(r()*6);let y,tries=0;do{y=Math.round(22+r()*150);tries++}while(tries<50&&!b.every((v,q)=>q===idx||Math.abs(v-y)>12));b[idx]=y}return b.sort((x,z)=>x-z)});
   return _case={f:state.fileNo,culprit,substance,prints,bands};
 }
-
+ 
 const isDone=id=>!!(state.stamps[id]&&state.stamps[id].done);
 const isOpen=id=>id===1||isDone(id-1);
 const doneCount=()=>STATIONS.filter(s=>isDone(s.id)).length;
@@ -334,17 +392,17 @@ const fmtTime=d=>new Date(d).toLocaleTimeString('ar-SA',{hour:'2-digit',minute:'
 setInterval(()=>{const c=document.getElementById('clock');if(c)c.textContent=fmtTime(Date.now())},1000);
 function rank(){const p=points()/maxPoints;return p>=.9?'خبير جنائي':p>=.7?'محقق ميداني':'محقق متدرّب'}
 let toastT;function toast(msg,good){const t=document.getElementById('toast');t.textContent=msg;t.className='toast show'+(good?' good':'');clearTimeout(toastT);toastT=setTimeout(()=>t.className='toast'+(good?' good':''),2200)}
-
+ 
 function finding(id){const C=CASE(),c=SUSPECTS[C.culprit].n;return {
   1:'رقّمت ٤ أدلة: كوب القهوة، شعرة، أثر حذاء، وعبوة صغيرة.',
   2:`البصمة المرفوعة من كوب القهوة تطابق: <b>${c}</b>`,
   3:`الـ DNA في الشعرة يطابق: <b>${c}</b>`,
   4:`المادة في دم د. سامر: <b>${SUBSTANCES[C.substance].n}</b> — ووُجدت عبوتها في خزانة <b>${c}</b>`,
   5:`أُغلقت القضية — المسؤول: <b>${c}</b>`}[id]}
-
+ 
 /* ======================== الألعاب ======================== */
 const GAMES={};
-
+ 
 /* ١: مسرح الجريمة */
 GAMES[1]=(el,ctx)=>{
   const EV={cup:['كوب القهوة',252,86],hair:['شعرة',300,196],shoe:['أثر حذاء',205,206],vial:['عبوة صغيرة',316,58]};
@@ -394,7 +452,7 @@ function sceneSVG(){return `<svg viewBox="0 0 360 260" xmlns="http://www.w3.org/
 <g data-ev="shoe"><rect x="184" y="196" width="44" height="40" fill="transparent"/><ellipse cx="198" cy="222" rx="5" ry="10" fill="#38383d" transform="rotate(-15 198 222)"/><ellipse cx="213" cy="212" rx="5" ry="10" fill="#38383d" transform="rotate(-15 213 212)"/></g>
 <g data-ev="hair"><rect x="282" y="190" width="40" height="28" fill="transparent"/><path d="M290 205q6-7 10 0t11-2" stroke="#9a7a5a" stroke-width="1.1" fill="none"/></g>
 <g id="marks"></g></svg>`}
-
+ 
 /* ٢: البصمات */
 GAMES[2]=(el,ctx)=>{
   const C=CASE(),target=C.prints[C.culprit];
@@ -423,7 +481,7 @@ GAMES[2]=(el,ctx)=>{
       if(+b.dataset.i===C.culprit){b.classList.add('right');setTimeout(()=>ctx.done(),700)}else{b.classList.add('wrong');ctx.mistake('غير مطابقة، دقّق أكثر في الخطوط')}});
   }
 };
-
+ 
 /* ٣: الأدلة البيولوجية */
 GAMES[3]=(el,ctx)=>{
   const C=CASE();
@@ -457,7 +515,7 @@ GAMES[3]=(el,ctx)=>{
       else{if(r.getAttribute('stroke')==='#e0533d')return;r.setAttribute('stroke','#e0533d');r.setAttribute('stroke-width','3');ctx.mistake('الأشرطة غير متطابقة كلها')}}));
   }
 };
-
+ 
 /* ٤: السموم */
 function chromSVG(peaks,w=320,h=110,col=Y,solvent=true){
   const all=(solvent?[[16,.55]]:[]).concat(peaks);let d='';
@@ -490,7 +548,7 @@ GAMES[4]=(el,ctx)=>{
       else{b.classList.add('wrong');b.disabled=true;ctx.mistake('مواقع القمم لا تتطابق')}});
   }
 };
-
+ 
 /* ٥: التقرير */
 GAMES[5]=(el,ctx)=>{
   const C=CASE(),names=SUSPECTS.map(s=>s.n);
@@ -510,21 +568,118 @@ GAMES[5]=(el,ctx)=>{
     const n=bad.filter(Boolean).length;if(!n){toast('✓ التقرير سليم ومعتمد!',true);setTimeout(()=>ctx.done(),900)}else ctx.mistake(`فيه ${arNum(n)} خطأ في التقرير، صحّحها`);
   };
 };
-
+ 
+ 
+/* ======================== الإعدادات العامة (روابط + رعاة) ======================== */
+const SET_GATE='d9e2f4eeb712acdf4237c60b82f767bfd202d6833469575e3d75403622ede5b3';
+const CFG_KEY='forensic-cfg-v1';
+const EMPTY_CFG={clubLogo:'',x:'',insta:'',linkedin:'',website:'',contact:'',follow:'insta',main:null,sponsors:[],stations:{}};
+let CFG=(()=>{try{return Object.assign({},EMPTY_CFG,JSON.parse(localStorage.getItem(CFG_KEY))||{})}catch(e){return Object.assign({},EMPTY_CFG)}})();
+let SET_KEY=null,draft=null;
+const CLUB_NAME='نادي علوم المختبرات الإكلينيكية';
+const SVGI=(d,c='#f2c230')=>`<svg viewBox="0 0 24 24" fill="none" stroke="${c}" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">${d}</svg>`;
+const SOC={insta:['إنستقرام','<rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".8" fill="#f2c230"/>'],
+  x:['إكس','<path d="M5 4l14 16M19 4L5 20"/>'],linkedin:['لينكدإن','<rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/>']};
+const safeUrl=u=>{u=(u||'').trim();if(!u)return '';if(/^(https?:|mailto:)/i.test(u))return u;if(/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(u))return 'mailto:'+u;
+  const d=u.replace(/[\s-]/g,'');if(/^\+?\d{9,15}$/.test(d))return 'https://wa.me/'+(d.startsWith('05')?'966'+d.slice(1):d.replace('+',''));return 'https://'+u.replace(/^\/+/,'')};
+const isImg=v=>typeof v==='string'&&/^data:image\/(png|jpeg|webp);base64,/.test(v);
+function spById(id){if(id==='main')return CFG.main&&isImg(CFG.main.logo)?CFG.main:null;const s=(CFG.sponsors||[]).find(x=>x&&x.id===id);return s&&isImg(s.logo)?s:null}
+function logoTile(sp,cls){const img=`<img src="${sp.logo}" alt="${esc(sp.name||'راعي')}">`;const u=safeUrl(sp.url);
+  return u?`<a class="tile ${cls||''}" href="${esc(u)}" target="_blank" rel="noopener">${img}</a>`:`<div class="tile ${cls||''}">${img}</div>`}
+function footerHTML(){
+  const main=spById('main'),others=(CFG.sponsors||[]).filter(x=>x&&isImg(x.logo));let sp='';
+  if(main||others.length){const cols=Math.min(3,others.length||1);
+    sp=`<div class="ttl">شركاء الرحلة</div>${main?logoTile(main,'spm'):''}${others.length?`<div class="spg" style="grid-template-columns:repeat(${cols},1fr)">${others.map(o=>logoTile(o)).join('')}</div>`:''}<div class="sep"></div>`}
+  const soc=['insta','x','linkedin'].filter(k=>CFG[k]).map(k=>`<a href="${esc(safeUrl(CFG[k]))}" target="_blank" rel="noopener" aria-label="${SOC[k][0]}">${SVGI(SOC[k][1])}</a>`).join('');
+  const lnk=[CFG.website?`<a href="${esc(safeUrl(CFG.website))}" target="_blank" rel="noopener">🌐 موقع النادي</a>`:'',CFG.contact?`<a href="${esc(safeUrl(CFG.contact))}" target="_blank" rel="noopener">✉️ تواصل معنا</a>`:''].join('');
+  return `<div class="w">${sp}${isImg(CFG.clubLogo)?`<img class="clogo" src="${CFG.clubLogo}" alt="شعار النادي">`:''}<b class="cn">${CLUB_NAME}</b><p>نصنع تجارب علمية تفاعلية 🔬</p>${soc?`<div class="row">${soc}</div>`:''}${lnk?`<div class="lnk">${lnk}</div>`:''}<div class="c">© ٢٠٢٦ ${CLUB_NAME}</div></div>`}
+function sbarHTML(id){const sp=spById((CFG.stations||{})[id]||'');if(!sp)return '';const u=safeUrl(sp.url);
+  const inner=`<div><b>هذه المحطة برعاية</b><small class="en">STATION SPONSOR</small></div><img src="${sp.logo}" alt="${esc(sp.name||'راعي')}">`;
+  return u?`<a class="sbar" href="${esc(u)}" target="_blank" rel="noopener">${inner}</a>`:`<div class="sbar">${inner}</div>`}
+function ctaHTML(){const k=CFG.follow&&CFG[CFG.follow]?CFG.follow:['insta','x','linkedin'].find(k=>CFG[k]);if(!k)return '';
+  return `<div class="cta"><h3>🔬 عجبتك الرحلة؟</h3><p>تابع ${CLUB_NAME} عشان ما تفوتك فعالياتنا الجاية</p><a class="btn" href="${esc(safeUrl(CFG[k]))}" target="_blank" rel="noopener">تابعنا على ${SOC[k][0]}</a></div>`}
+function refreshCfg(){const f=document.getElementById('footer');if(f)f.innerHTML=footerHTML();
+  const sb=document.getElementById('sbar');if(sb&&view.station)sb.innerHTML=sbarHTML(view.station);
+  const c=document.getElementById('cta');if(c)c.innerHTML=ctaHTML();
+  const hd=document.getElementById('hdr');if(hd){hd.innerHTML=isImg(CFG.clubLogo)&&view.name!=='cover'?`<img src="${CFG.clubLogo}" alt="شعار النادي"><span>${CLUB_NAME}</span>`:'';hd.style.display=hd.innerHTML?'flex':'none'}
+  const cl=document.getElementById('coverLogo');if(cl)cl.innerHTML=isImg(CFG.clubLogo)?`<img src="${CFG.clubLogo}" alt="شعار النادي">`:''}
+function applyCfg(v){CFG=Object.assign({},EMPTY_CFG,v||{});try{localStorage.setItem(CFG_KEY,JSON.stringify(CFG))}catch(e){}refreshCfg()}
+let cfgOn=false,cfgLoaded=false;function startCfg(){if(!fdb||cfgOn)return;cfgOn=true;fdb.ref('config/data').on('value',snap=>{applyCfg(snap.val());if(!cfgLoaded){cfgLoaded=true;if(view.name==='settings'&&SET_KEY&&!draft)render()}},()=>{cfgLoaded=true})}
+ 
+/* ---------- صفحة الإعدادات ---------- */
+function downscale(file){return new Promise((ok,no)=>{const fr=new FileReader();fr.onerror=no;fr.onload=()=>{const im=new Image();im.onerror=no;im.onload=()=>{
+  const W=420,H=200,r=Math.min(1,W/im.width,H/im.height);const c=document.createElement('canvas');c.width=Math.max(1,Math.round(im.width*r));c.height=Math.max(1,Math.round(im.height*r));
+  c.getContext('2d').drawImage(im,0,0,c.width,c.height);let d=c.toDataURL('image/png');if(d.length>180000)d=c.toDataURL('image/webp',.85);ok(d)};im.src=fr.result};fr.readAsDataURL(file)})}
+function spCard(sp,key,title){return `<div class="spc"><div style="font-weight:900;font-size:.85rem;margin-bottom:8px">${title}</div><div class="top">
+  <label class="prev" style="margin:0">${sp&&sp.logo?`<img src="${sp.logo}">`:'اضغط لرفع الشعار'}<input type="file" accept="image/png,image/jpeg,image/webp,image/svg+xml" data-up="${key}" hidden></label>
+  <div class="acts"><input class="in" placeholder="اسم الراعي" data-sf="${key}|name" value="${esc(sp&&sp.name||'')}"><input class="in ltr" placeholder="رابط الراعي (اختياري)" data-sf="${key}|url" value="${esc(sp&&sp.url||'')}"></div></div>
+  ${sp&&sp.logo?`<div class="acts" style="flex-direction:row;margin-top:8px"><button data-del="${key}" class="del">🗑️ حذف الراعي</button></div>`:''}</div>`}
+function renderSettings(){
+  const back=state.name?'map':'cover';
+  if(!SET_KEY)return `<div class="topbar"><span class="label">الإعدادات</span></div><div class="panel fade" style="text-align:center">
+    <p>اكتب كلمة مرور الإعدادات</p><input class="field" id="spw" type="password" style="margin-top:8px"><div class="msg err" id="spwMsg"></div>
+    <button class="btn" id="spwBtn">دخول</button><div style="margin-top:10px"><button class="link" data-go="${back}">رجوع للموقع</button></div></div>`;
+  if(fbState==='on'&&!cfgLoaded)return `<div class="topbar"><span class="label">⚙️ الإعدادات</span></div><div class="dnote">جاري تحميل الإعدادات…</div>`;
+  if(!draft)draft=JSON.parse(JSON.stringify(CFG));
+  const opts=id=>[['','بدون راعي'],...(draft.main&&draft.main.logo?[['main','الراعي الرئيسي'+(draft.main.name?' — '+draft.main.name:'')]]:[]),...draft.sponsors.filter(x=>x.logo).map((x,i)=>[x.id,x.name||('راعي '+(i+1))])]
+    .map(([v,t])=>`<option value="${v}" ${((draft.stations||{})[id]||'')===v?'selected':''}>${esc(t)}</option>`).join('');
+  const fb=fbState==='on'?'':`<div class="dnote" style="margin-top:12px">⚠️ الحفظ يحتاج اتصال Firebase (يشتغل على رابط GitHub). ${fbState==='loading'?'جاري الاتصال…':''}</div>`;
+  return `<div class="topbar"><span class="label">⚙️ الإعدادات</span><button class="btn ghost small" data-go="${back}">خروج</button></div><div class="set fade">${fb}
+  <div class="sec"><h3>🏷️ شعار النادي</h3><div class="hint">يطلع فوق غلاف الموقع وفي الفوتر. يفضّل PNG بخلفية شفافة.</div>
+    <div class="spc" style="margin-top:0"><div class="top"><label class="prev dark" style="margin:0">${draft.clubLogo?`<img src="${draft.clubLogo}">`:'اضغط لرفع الشعار'}<input type="file" accept="image/png,image/jpeg,image/webp,image/svg+xml" data-up-club hidden></label>
+    <div class="acts">${draft.clubLogo?`<button class="del" data-del-club>🗑️ حذف الشعار</button>`:'<span style="font-size:.8rem;color:#888">ما فيه شعار — الموقع يطلع بدونه</span>'}</div></div></div></div>
+  <div class="sec"><h3>📱 حسابات النادي</h3><div class="hint">الحساب اللي تتركينه فاضي ما يطلع في الموقع.</div>
+    <label>إنستقرام</label><input class="in ltr" data-f="insta" placeholder="https://instagram.com/..." value="${esc(draft.insta)}">
+    <label>إكس</label><input class="in ltr" data-f="x" placeholder="https://x.com/..." value="${esc(draft.x)}">
+    <label>لينكدإن</label><input class="in ltr" data-f="linkedin" placeholder="https://linkedin.com/..." value="${esc(draft.linkedin)}"></div>
+  <div class="sec"><h3>🌐 موقع النادي وتواصل معنا</h3>
+    <label>رابط موقع النادي</label><input class="in ltr" data-f="website" placeholder="https://..." value="${esc(draft.website)}">
+    <label>تواصل معنا</label><div class="hint" style="margin:0 0 4px">إيميل، أو رقم واتساب، أو رابط نموذج.</div><input class="in ltr" data-f="contact" placeholder="club@email.com" value="${esc(draft.contact)}"></div>
+  <div class="sec"><h3>💛 زر «تابعنا» في نهاية الرحلة</h3><div class="hint">يودّي الزائر لأي حساب؟</div>
+    <div class="radios">${['insta','x','linkedin'].map(k=>`<button data-fol="${k}" class="${draft.follow===k?'on':''}">${SOC[k][0]}</button>`).join('')}</div></div>
+  <div class="sec"><h3>⭐ الرعاة</h3><div class="hint">الشعار يفضّل PNG بخلفية شفافة. الراعي بدون شعار ما يطلع في الموقع.</div>
+    ${spCard(draft.main,'main','الراعي الرئيسي')}
+    ${draft.sponsors.map((sp,i)=>spCard(sp,sp.id,'راعي '+arNum(i+1))).join('')}
+    ${draft.sponsors.length<6?`<button class="addsp" id="addSp">+ إضافة راعي</button>`:''}</div>
+  <div class="sec"><h3>📍 رعاة المحطات</h3><div class="hint">اختاري راعي لكل محطة، يطلع للزائر في صفحة المحطة.</div>
+    ${STATIONS.map(st=>`<div class="strow"><span>${arNum(st.id)}. ${st.title}</span><select data-st-sp="${st.id}">${opts(st.id)}</select></div>`).join('')}</div>
+  <div class="savebar"><button class="btn" id="saveCfg">💾 حفظ ونشر للزوار</button><div class="smsg" id="smsg"></div></div></div>`}
+function bindSettings(){
+  const pw=document.getElementById('spwBtn');
+  if(pw){const i=document.getElementById('spw');const go=()=>{const v=i.value.trim();if(sha256(v+'|cfg-gate')===SET_GATE){SET_KEY=v;draft=null;render()}else document.getElementById('spwMsg').textContent='كلمة المرور غير صحيحة'};pw.onclick=go;i.onkeydown=e=>{if(e.key==='Enter')go()};return}
+  if(!draft)return;
+  const getSp=k=>k==='main'?(draft.main=draft.main||{logo:'',name:'',url:''}):draft.sponsors.find(x=>x.id===k);
+  $app.querySelectorAll('[data-f]').forEach(i=>i.oninput=()=>{draft[i.dataset.f]=i.value.trim()});
+  $app.querySelectorAll('[data-sf]').forEach(i=>i.oninput=()=>{const [k,f]=i.dataset.sf.split('|');const sp=getSp(k);if(sp)sp[f]=i.value.trim()});
+  $app.querySelectorAll('[data-fol]').forEach(b=>b.onclick=()=>{draft.follow=b.dataset.fol;render()});
+  $app.querySelectorAll('[data-st-sp]').forEach(sel=>sel.onchange=()=>{draft.stations=draft.stations||{};draft.stations[sel.dataset.stSp]=sel.value});
+  $app.querySelectorAll('[data-up]').forEach(inp=>inp.onchange=async()=>{const f=inp.files[0];if(!f)return;try{const d=await downscale(f);getSp(inp.dataset.up).logo=d;render()}catch(e){toast('ما قدرت أقرأ الصورة، جربي PNG أو JPG')}});
+  $app.querySelectorAll('[data-del]').forEach(b=>b.onclick=()=>{const k=b.dataset.del;if(k==='main')draft.main=null;else draft.sponsors=draft.sponsors.filter(x=>x.id!==k);
+    for(const id in draft.stations)if(draft.stations[id]===k)draft.stations[id]='';render()});
+  const cu=$app.querySelector('[data-up-club]');if(cu)cu.onchange=async()=>{const f=cu.files[0];if(!f)return;try{draft.clubLogo=await downscale(f);render()}catch(e){toast('ما قدرت أقرأ الصورة، جربي PNG أو JPG')}};
+  const cd=$app.querySelector('[data-del-club]');if(cd)cd.onclick=()=>{draft.clubLogo='';render()};
+  const add=document.getElementById('addSp');if(add)add.onclick=()=>{draft.sponsors.push({id:'s'+newId().slice(0,6),logo:'',name:'',url:''});render()};
+  document.getElementById('saveCfg').onclick=()=>{const m=document.getElementById('smsg');
+    if(!fdb){m.className='smsg err';m.textContent='ما فيه اتصال بـ Firebase. افتحي الإعدادات من رابط GitHub.';return}
+    const data=JSON.parse(JSON.stringify(draft));data.sponsors=data.sponsors.filter(x=>x.logo);if(data.main&&!data.main.logo)data.main=null;
+    m.className='smsg';m.textContent='جاري الحفظ…';
+    fdb.ref('config').set({k:sha256(SET_KEY+'|cfg-write'),data}).then(()=>{m.className='smsg ok';m.textContent='✓ انحفظ! الموقع تحدّث عند كل الزوار';draft=JSON.parse(JSON.stringify(data));applyCfg(data)})
+      .catch(()=>{m.className='smsg err';m.textContent='✗ ما انحفظ. تأكدي إنك حدّثتي قواعد Firebase.'})};
+}
 /* ======================== الواجهات ======================== */
 const $app=document.getElementById('app');
 function go(name,extra={}){Object.assign(view,{name},extra);render();window.scrollTo({top:0,behavior:'smooth'})}
 function topbar(){return `<div class="topbar"><span class="label">ملف الزائر</span>${state.name?`<span class="file">${esc(state.name)} · <span class="en">#${state.fileNo}</span></span><span class="pts">${arNum(points())} نقطة</span>`:''}</div>`}
-
+ 
 function renderCover(){return `<div class="fade">
   <div class="cover"><div class="tape tilt" style="margin-top:14px"></div><div class="inner">
-    <span class="label">ملف الزائر</span><h1>${CONFIG.eventName}</h1><div class="sub en">${CONFIG.eventEn}</div>
+    <div id="coverLogo" class="coverLogo"></div><span class="label">ملف الزائر</span><h1>${CONFIG.eventName}</h1><div class="sub en">${CONFIG.eventEn}</div>
     <div class="lens"><div class="glass">${fingerprint(3,'#2a2a2a',1.5).replace('<svg','<svg style="width:120px;height:140px"')}</div><div class="handle"></div></div>
     <div class="stamp-box">VISITOR FILE</div></div><div class="tape tilt" style="margin-bottom:16px"></div></div>
   <div class="section"><label for="nm" style="display:block;font-weight:700;margin-bottom:6px">اكتب اسمك لفتح ملفك</label>
     <input id="nm" class="field" maxlength="30" placeholder="اسم المحقق" autocomplete="off"><div class="msg err" id="nmMsg"></div>
     <button class="btn" id="startBtn" style="margin-top:6px">افتح الملف وابدأ الرحلة</button></div></div>`}
-
+ 
 function renderMap(){
   const d=doneCount();
   return `${topbar()}<div class="fade">
@@ -542,11 +697,11 @@ function renderMap(){
   ${d===STATIONS.length?`<div class="section"><button class="btn" data-go="done">🏁 افتح ملف إغلاق القضية</button></div>`:''}
   <div class="foot"><button class="link" id="resetBtn">بدء ملف جديد</button></div></div>`;
 }
-
+ 
 function renderStation(){
   const s=STATIONS.find(x=>x.id===view.station),idx=STATIONS.indexOf(s),done=isDone(s.id);
   const head=`${topbar()}<div class="fade"><div class="st-head"><button class="btn ghost small" data-go="map">→ المحطات</button><div class="st-num">${arNum(s.id)}</div></div>
-  <div class="hero">${ICONS[s.icon].replace('<svg','<svg class="big"')}<span class="en">STATION 0${s.id} · ${s.en.toUpperCase()}</span></div>`;
+  <div class="hero">${ICONS[s.icon].replace('<svg','<svg class="big"')}<span class="en">STATION 0${s.id} · ${s.en.toUpperCase()}</span></div><div id="sbar">${sbarHTML(s.id)}</div>`;
   if(!isOpen(s.id))return head+`<div class="panel lockbox"><div class="big">🔒</div><h2>المحطة مقفلة</h2><p style="color:#bbb">أكمل تحدي محطة «${STATIONS[idx-1].title}» أولًا.</p>
     <button class="btn" data-st="${STATIONS[idx-1].id}" style="margin-top:14px">اذهب للمحطة ${arNum(idx)}</button></div></div>`;
   if(done){const st=state.stamps[s.id];const nx=STATIONS[idx+1];
@@ -562,7 +717,7 @@ function renderStation(){
     <div class="msg err" id="codeMsg"></div></div></div>`;
   return head+`<div class="game"><div class="ghead"><span class="label" style="font-size:.9rem">تحدّي المحطة</span><span class="miss">الأخطاء: <b id="miss">${arNum(view.miss||0)}</b></span></div><div id="g"></div></div></div>`;
 }
-
+ 
 function renderDone(){
   if(!state.finishedAt){state.finishedAt=Date.now();save()}
   const mins=Math.max(1,Math.round((state.finishedAt-state.startedAt)/60000));const C=CASE();
@@ -577,9 +732,9 @@ function renderDone(){
       <div><b>${arNum(STATIONS.length)}/${arNum(STATIONS.length)}</b><span>محطات</span></div><div><b>${arNum(mins)}</b><span>دقيقة</span></div></div>
     <div class="stamps-row">${STATIONS.map(s=>fingerprint(s.id+10,'#1b1b1b',2.2)).join('')}</div>
     <div class="verify">رمز التحقق: <b dir="ltr">${verifyCode()}</b><div class="live"><span class="dot"></span>مباشر · <span id="clock">${fmtTime(Date.now())}</span></div>اعرض هذه الشاشة على المنظمين لاستلام هديتك 🎁</div></div>
-  <div class="nav"><button class="btn ghost" data-go="map">→ رجوع للمحطات</button></div></div>`;
+  <div id="cta">${ctaHTML()}</div><div class="nav"><button class="btn ghost" data-go="map">→ رجوع للمحطات</button></div></div>`;
 }
-
+ 
 const ago=t=>{const m=Math.floor((Date.now()-t)/60000);return m<1?'الآن':m<60?`قبل ${arNum(m)} د`:`قبل ${arNum(Math.floor(m/60))} س`};
 function visitors(){return LIVE?Object.entries(LIVE).map(([k,v])=>({k,...v})).filter(v=>v&&v.name):[]}
 function vStatus(v){if(v.redeemedAt)return 'gift';if(v.finishedAt||v.doneCount>=STATIONS.length)return 'done';if(Date.now()-(v.updatedAt||0)>20*60000)return 'idle';return 'play'}
@@ -618,13 +773,13 @@ function renderOrg(){
   <p style="font-size:.88rem;margin-top:14px"><b>عند استلام الهدية:</b> تأكد أن الساعة في شاشة الزائر <b>تتحرك</b> (مو صورة شاشة قديمة)، وبعدين تحقق من الرمز هنا. استخدموا <b>جهاز واحد</b> لصرف الهدايا عشان يتعرف على الرموز المستخدمة.</p>
   <p style="font-size:.88rem;margin-top:6px"><b>ملاحظة:</b> المسؤول في القضية يتغير من زائر لزائر، فما ينفع أحد ينقل الإجابات لغيره.</p></div>`;
 }
-
+ 
 function render(){
   if(view.name==='station'&&!view.station)view.name='map';
   if(view.name==='done'&&doneCount()<STATIONS.length)view.name='map';
-  if(view.name!=='org'&&!state.name)view.name='cover';
-  $app.innerHTML=({cover:renderCover,map:renderMap,station:renderStation,done:renderDone,org:renderOrg}[view.name]||renderMap)();
-  bind();
+  if(view.name!=='org'&&view.name!=='settings'&&!state.name)view.name='cover';
+  $app.innerHTML=({cover:renderCover,map:renderMap,station:renderStation,done:renderDone,org:renderOrg,settings:renderSettings}[view.name]||renderMap)();
+  bind();if(view.name==='settings')bindSettings();refreshCfg();
   const g=document.getElementById('g');
   if(g){view.miss=0;const sid=view.station;
     GAMES[sid](g,{mistake(msg){view.miss++;document.getElementById('miss').textContent=arNum(view.miss);toast('✗ '+msg)},
@@ -632,9 +787,9 @@ function render(){
         window.scrollTo({top:0,behavior:'smooth'});toast(`🎉 أنجزت التحدي! +${arNum(score)} نقطة`,true);
         if(doneCount()===STATIONS.length)setTimeout(showModal,1500)}})}
 }
-
+ 
 function bind(){
-  $app.querySelectorAll('[data-go]').forEach(b=>b.onclick=()=>{if(view.name==='org'&&location.hash){try{history.replaceState(null,'',location.pathname+location.search)}catch(e){location.hash=''}}go(b.dataset.go)});
+  $app.querySelectorAll('[data-go]').forEach(b=>b.onclick=()=>{if((view.name==='org'||view.name==='settings')&&location.hash){try{history.replaceState(null,'',location.pathname+location.search)}catch(e){location.hash=''}}go(b.dataset.go)});
   $app.querySelectorAll('[data-st]').forEach(b=>b.onclick=()=>{const id=+b.dataset.st;if(!isOpen(id)){toast('🔒 أكمل المحطة السابقة أولًا');return}go('station',{station:id})});
   const startBtn=document.getElementById('startBtn');
   if(startBtn){const nm=document.getElementById('nm');const start=()=>{const v=nm.value.trim();
@@ -673,7 +828,7 @@ function showModal(){$modal.innerHTML=`<div class="modal"><div class="box fade">
 function confirmBox(title,text,yes){$modal.innerHTML=`<div class="modal"><div class="box fade"><h3>${title}</h3><p>${text}</p>
   <div class="nav"><button class="btn ghost" id="cNo">إلغاء</button><button class="btn" id="cYes">نعم</button></div></div></div>`;
   document.getElementById('cNo').onclick=closeModal;document.getElementById('cYes').onclick=()=>{closeModal();yes()}}
-function fromHash(){if(location.hash==='#organizers'){view.name='org';view.orgOk=false}render()}
+function fromHash(){if(location.hash==='#organizers'){view.name='org';view.orgOk=false}else if(location.hash==='#settings'){view.name='settings'}render()}
 window.addEventListener('hashchange',fromHash);
 initFB();
 fromHash();
